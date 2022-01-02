@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+body{
+    background-color: rgb(219, 213, 213);
+}
+
+.navbar {
+    height: 60px;
+    background-color: rgb(233, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container-form-blog {
+    height: 93vh;
+}
+
+.container-form {
+    width: 450px;
+}
+
+.btn-orange {
+    background-color: orangered;
+}
+
+.text-orange {
+    color: #b04691 !important;
+}
+
+input, textarea {
+    border: 2px solid rgb(208, 208, 208) !important;
+    background-color: rgb(242, 242, 242) !important;
+}
+
+.btn {
+    background-color: #5b217e !important;
+}
+
+.contact{
+    border-radius: 20px;
+}

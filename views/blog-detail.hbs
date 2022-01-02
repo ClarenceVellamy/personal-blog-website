@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+     <!-- Start Favicon -->
+    <link rel="shortcut icon" href="images/CV.png" type="image/x-icon">
+    <!-- End Favicon -->
+    <link rel="stylesheet" href="/stylesheets/web.css">
+</head>
+<body>
+
+    <!-- Start Navbar -->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check">
+            <i class="material-icons" id="btn">subject</i>
+            <i class="material-icons" id="close">close</i>
+        </label>
+        <a href="/">
+            <h2>portfolio</h2>
+        </a>
+        <ul>
+            <li><a class="home" href="/">home</a></li>
+            <li><a href="/blog">blog</a></li>
+            <li><a class="contact" href="/contact">contact</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+
+   <!-- Blog -->
+   <div class="blog-detail">
+    <div class="blog-detail-container">
+      <h1>{{blog.title}} </h1>
+      <div class="author">{{blog.post_at}} | {{blog.author}}</div>
+      <img src="/{{blog.image}}" alt="detail" />
+      <p>
+        {{blog.content}}
+      </p>
+    </div>
+  </div>
+</body>
+</html>

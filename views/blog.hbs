@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="images/CV.png" type="image/x-icon">
+    <!-- End Favicon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="stylesheets/web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Start Navbar -->
+     <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check">
+            <i class="material-icons" id="btn">subject</i>
+            <i class="material-icons" id="close">close</i>
+        </label>
+        <a href="/">
+            <h2>portfolio</h2>
+        </a>
+        <ul>
+          {{#if isLogin}}
+            <li>Hallo, Selamat datang {{user.name}}</li>
+            <li><a href="logout">Logout</a></li>
+          {{else}}
+            <li><a href="register">Register</a></li>
+            <li><a href="login">Login</a></li>
+          {{/if}}
+            <li><a class="home" href="/">home</a></li>
+            <li><a href="blog">blog</a></li>
+            <li><a class="contact" href="contact">contact</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+
+     {{#if messages.success}}
+        <div class="alert alert-success" role="alert">
+           {{messages.success}}
+        </div>
+      {{/if}}
+
+    <!-- Form -->
+    <div class="blog">
+       
+        <div style="text-align: right; padding-right: 150px; margin-top:50px;">
+          {{#if isLogin}}
+            <a href="add" style="
+            background-color: #5b217e; 
+            color:white; 
+            padding :7px 20px; 
+            text-decoration:none; 
+            border-radius : 8px;">
+            Add Blog</a>
+            {{/if}}
+        </div>
+        <div id="contents" class="blog-list">
+          {{#each blogs}}
+          <!-- dynamic content would be here -->
+          <div class="blog-list-item">
+            <div class="blog-image">
+              <img src="/{{this.image}}" alt="" />
+            </div>
+            <div class="blog-content">
+              {{#if isLogin}}
+              <div class="btn-group">
+                <a href="update/{{this.id}}" class="btn-edit">Edit Post</a>
+                <a href="/delete-blog/{{this.id}}" class="btn-post">Delete Blog</a>
+              </div>
+              {{/if}}
+              <h1>
+                <a href="blog-detail/{{this.id}}" target="_blank"
+                  >{{this.title}}</a
+                >
+              </h1>
+              <div class="detail-blog-content">
+                {{this.post_at}} | {{this.author}}
+              </div>
+              <p>
+                {{this.content}}
+              </p>
+               <div style="text-align: right; font-size: 15px; color: grey">
+                               {{this.post_time}}
+                </div>
+            </div>
+          </div>
+          {{/each}}
+
+        </div>
+      </div>
+      <script src="Javascript/blog.js"></script>
+    </body>
+  </html>

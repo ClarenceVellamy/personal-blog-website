@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="stylesheets/web.css">
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="images/CV.png" type="image/x-icon">
+    <!-- End Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- Start Navbar -->
+    <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check">
+            <i class="material-icons" id="btn">subject</i>
+            <i class="material-icons" id="close">close</i>
+        </label>
+        <a href="/">
+            <h2>portfolio</h2>
+        </a>
+        <ul>
+            <li><a class="home" href="/">home</a></li>
+            <li><a href="blog">blog</a></li>
+            <li><a class="contact" href="contact">contact</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Home -->
+    <div class="main">
+        <!-- Start Card -->
+        <div class="container-card">
+           <div class="card">
+               <img src="images/Woman.jpg" alt="Portfolio images">
+                   <h2>Clarence Vellamy<span> .</span> </h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat illo illum architecto sapiente, molestias quibusdam iure esse quidem nostrum laboriosam.</p>
+                   <table class="table"> 
+                       <tr>
+                           <th>Project Name</th>
+                           <th>Year</th>
+                       </tr>
+                       {{#each table}}
+                       <tr>
+                           <td>{{this.name}}</td>
+                           <td>{{this.year}}</td>
+                       </tr>
+                       {{/each}}
+                   </table>
+               </img>
+           </div>
+       </div>
+        <!-- End Card -->
+   
+           <div class="info">
+               <div class="information">
+                   <h2>What i do</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo libero totam unde natus, eos minima voluptas quaerat veritatis ducimus placeat similique maxime, a facilis, dolor vero temporibus ut aspernatur ad voluptate quas assumenda magni sapiente praesentium fuga. Commodi molestias tempore maiores eligendi, placeat consectetur iusto doloremque praesentium ratione, dolor accusantium!</p>
+               </div>
+               <div class="skills">
+                   <div class="first-skill">
+                     <img src="images/js.png" alt="JavaScript Image">
+                     <h3>Frontend Developer</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  dolores, maxime dicta earum culpa molestias?</p>
+                   </div>
+                   <div class="second-skill">
+                     <img src="images/github.png" alt=" Github Image">
+                     <h3>Version Control</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae perferendis reiciendis quis et dolores ad.</p>
+                   </div>
+                   <div class="third-skill">
+                     <img src="images/deploy.png" alt="Netlify Image">
+                     <h3>Automated Deployment</h3>
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde doloribus libero reprehenderit excepturi fugiat corporis.</p>
+                   </div>
+               </div>
+               
+               <div class="social-media">
+                   <h1>Found Me On</h1>
+                   <div class="sosmed-list">
+                       <a href="https://github.com/" target="_blank" class="link-icons"><i class="fab fa-github"></i></a>
+                       <a href="https://www.linkedin.com/in/clarence-vellamy-636068228/" target="_blank" class="link-icons"><i class="fab fa-linkedin"></i></a>
+                       <a href="https://www.facebook.com/" target="_blank" class="link-icons"><i class="fab fa-facebook-square"></i></a>
+                       <a href="https://api.whatsapp.com/" target="_blank" class="link-icons"><i class="fab fa-whatsapp"></i></a>
+                       <a href="https://www.instagram.com/clarencevell/" target="_blank" class="link-icons"><i class="fab fa-instagram"></i></a>
+                   </div>
+               </div>
+   
+           </div>
+       </div>
+   
+       <footer>Copyright <i class="far fa-copyright"></i>2021 by Clarence Vellamy</footer>
+    <!-- End Home -->
+
+</body>
+</html>

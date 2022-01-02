@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="images/CV.png" type="image/x-icon">
+    <!-- End Favicon -->
+    <title>Personal Website - Contact </title>
+    <link rel="stylesheet" href="stylesheets/web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Start Navbar -->
+       <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check">
+            <i class="material-icons" id="btn">subject</i>
+            <i class="material-icons" id="close">close</i>
+        </label>
+        <a href="/">
+            <h2>portfolio</h2>
+        </a>
+        <ul>
+            <li><a class="home" href="/">home</a></li>
+            <li><a href="blog">blog</a></li>
+            <li><a  class="contact" href="contact">contact</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+
+   <!-- Start Form -->
+    <section class="contact">
+        <div class="row">
+            <form  action="" method="post">
+                <h3>Contact Me</h3>
+                <input type="text" class="box" name="name" id="name" placeholder="your Name" >
+                <input type="tel" class="box" name="phone" id="phone" placeholder="your phone number" >
+                <input type="email" class="box" name="email" id="email" placeholder="example@gmail.com" >
+
+                <div class="result">
+                    <div class="subject">
+                        <label for="subject">Subject</label>
+                        <select name="subject" id="subject">
+                        <option value="Privacy Police">Privacy Police</option>
+                        <option value="Problem With Our Site">Problem With Our Site</option>
+                        <option value="Questions On Order">Questions On Order</option>
+                        <option value="Other Questions">Other Questions</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <textarea id="message" cols="20" rows="4" placeholder="message here" ></textarea>
+
+                <button type="submit" class="button">SUBMIT</button>
+
+            </form>
+
+            
+        </div>
+    </section>
+   <!-- End Form -->
+
+   <script src="contact.js"></script>
+   </body>
+</html>

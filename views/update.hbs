@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Start Favicon -->
+    <link rel="shortcut icon" href="images/CV.png" type="image/x-icon">
+    <!-- End Favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="/stylesheets/web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+     <!-- Start Navbar -->
+     <nav>
+        <input type="checkbox" name="" id="check">
+        <label for="check">
+            <i class="material-icons" id="btn">subject</i>
+            <i class="material-icons" id="close">close</i>
+        </label>
+        <a href="index.html">
+            <h2>portfolio</h2>
+        </a>
+        <ul>
+            <li><a class="home" href="/">home</a></li>
+            <li><a href="/blog">blog</a></li>
+            <li><a class="/contact" href="contact.html">contact</a></li>
+        </ul>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Form -->
+    <div class="blog">
+        <div class="blog-form">
+          <div class="form-container">
+
+            <form method="post" action="/edit/{{id}} " enctype="multipart/form-data">
+              <h1>Update Post Blog</h1>
+              <div>
+                 <label for="input-blog-title">Title</label>
+                 <input id="input-blog-title" name="title" value="{{edit.title}}" />
+              </div>
+              <div>
+                 <label for="input-blog-content">Content</label>
+                 <textarea id="input-blog-content" name="content"></textarea>
+              </div>
+              <div>
+                 <label>Upload Image</label>
+                 <div class="input-blog-image-group">
+                    <label for="input-blog-image">
+                       <p>Attach File</p>
+                       <img src="images/file.png" alt="file" />
+                    </label>
+                    <input type="file" value="{{edit.image}}" id="input-blog-image" name="image" hidden />
+                 </div>
+              </div>
+              <div class="button-group">
+                 <button>Post Blog</button>
+              </div>
+           </form>
+            
+          </div>
+        </div>
+        <hr class="line" />
+      </div>
+      {{!-- <script src="blog.js"></script> --}}
+    </body>
+  </html>
